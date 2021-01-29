@@ -185,7 +185,7 @@ export default {
                         ['clean'],
                     ],
                 },
-                theme: 'snow',
+                theme: 'bubble',
                 scrollingContainer: 'html, body',
                 placeholder: this.trans.tell_your_story,
             });
