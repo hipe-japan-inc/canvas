@@ -174,12 +174,18 @@ export default {
                 modules: {
                     syntax: true,
                     toolbar: [
-                        ['bold', 'italic', 'code', 'link'],
-                        [{ header: '2' }, { header: '3' }],
-                        ['blockquote', 'code-block'],
+                        [{ font: [] }, { size: [] }],
+                        ['bold', 'italic', 'underline', 'strike'],
+                        [{ color: [] }, { background: [] }],
+                        [{ script: 'super' }, { script: 'sub' }],
+                        [{ header: '1' }, { header: '2' }, 'blockquote', 'code-block'],
+                        [{ list: 'ordered' }, { list: 'bullet' }, { indent: '-1' }, { indent: '+1' }],
+                        ['direction', { align: [] }],
+                        ['link', 'image', 'video', 'formula'],
+                        ['clean'],
                     ],
                 },
-                theme: 'bubble',
+                theme: 'snow',
                 scrollingContainer: 'html, body',
                 placeholder: this.trans.tell_your_story,
             });
