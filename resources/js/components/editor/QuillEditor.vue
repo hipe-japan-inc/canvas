@@ -189,7 +189,7 @@ export default {
                         [{ color: [] }, { background: [] }], // dropdown with defaults from theme
                         [{ font: [] }],
                         [{ align: [] }],
-
+                        ['link', 'image', 'video', 'formula'],
                         ['clean'],
                     ],
                 },
@@ -461,7 +461,9 @@ div.embedded_image[data-layout='wide'] {
 .ql-editor.ql-blank::before {
     left: 0 !important;
 }
-
+.ql-align-center {
+    text-align: center;
+}
 .btn-circle {
     width: 40px;
     height: 40px;
