@@ -6,9 +6,8 @@ export default {
         request() {
             let instance = axios.create();
 
-            instance.defaults.headers.common['X-CSRF-TOKEN'] = document.head.querySelector(
-                'meta[name="csrf-token"]'
-            ).content;
+            instance.defaults.headers.common['X-CSRF-TOKEN'] =
+                document.head.querySelector('meta[name="csrf-token"]').content;
 
             instance.defaults.baseURL = store.state.settings.path;
 
@@ -22,6 +21,7 @@ export default {
                 switch (error.response.status) {
                     case 401:
                     case 405:
+                        // TODO: This check needs to be rewritten
                         if (store.state.settings.path === '/') {
                             window.location.href = `/logout`;
                         } else {

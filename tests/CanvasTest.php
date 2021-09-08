@@ -58,18 +58,11 @@ class CanvasTest extends TestCase
         $this->assertIsString(Canvas::baseStoragePath());
     }
 
-    public function testURLIsValid(): void
+    public function testParseReferer(): void
     {
-        $this->assertTrue(Canvas::isValidUrl('https://www.example.com'));
-
-        $this->assertFalse(Canvas::isValidUrl('://www.example.c'));
-    }
-
-    public function testTrimURL(): void
-    {
-        $url = Canvas::trimUrl('https://www.example.com?string-to-trim');
-
-        $this->assertSame($url, 'www.example.com');
+        $this->assertSame(Canvas::parseReferer('https://www.example.com'), 'www.example.com');
+        $this->assertNull(Canvas::parseReferer(null));
+        $this->assertNull(Canvas::parseReferer('://www.example.c'));
     }
 
     public function testGravatar(): void
@@ -84,5 +77,20 @@ class CanvasTest extends TestCase
         $this->assertStringContainsString(sprintf('s=%s', $size), $url);
         $this->assertStringContainsString(sprintf('d=%s', $default), $url);
         $this->assertStringContainsString(sprintf('r=%s', $rating), $url);
+    }
+
+    public function testEnabledDarkMode(): void
+    {
+        $this->assertTrue(Canvas::enabledDarkMode(1));
+        $this->assertFalse(Canvas::enabledDarkMode(0));
+        $this->assertFalse(Canvas::enabledDarkMode(null));
+    }
+
+    public function testUsingRightToLeftLanguage(): void
+    {
+        $this->assertTrue(Canvas::usingRightToLeftLanguage('ar'));
+        $this->assertTrue(Canvas::usingRightToLeftLanguage('fa'));
+        $this->assertFalse(Canvas::usingRightToLeftLanguage('en'));
+        $this->assertFalse(Canvas::usingRightToLeftLanguage(null));
     }
 }

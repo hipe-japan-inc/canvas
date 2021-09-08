@@ -29,7 +29,15 @@
                     <div class="card-deck mt-4 pt-2">
                         <div class="card shadow-lg">
                             <div
-                                class="card-header pb-0 bg-transparent d-flex justify-content-between align-middle border-0"
+                                class="
+                                    card-header
+                                    pb-0
+                                    bg-transparent
+                                    d-flex
+                                    justify-content-between
+                                    align-middle
+                                    border-0
+                                "
                             >
                                 <p class="font-weight-bold text-muted small text-uppercase">{{ trans.views }}</p>
                                 <p>
@@ -39,12 +47,20 @@
                                 </p>
                             </div>
                             <div class="card-body pt-0 pb-2">
-                                <p class="card-text display-4">{{ suffixedNumber(data.totalViews) }}</p>
+                                <p class="card-text display-4">{{ suffixedNumber(data.views) }}</p>
                             </div>
                         </div>
                         <div class="card shadow-lg">
                             <div
-                                class="card-header pb-0 bg-transparent d-flex justify-content-between align-middle border-0"
+                                class="
+                                    card-header
+                                    pb-0
+                                    bg-transparent
+                                    d-flex
+                                    justify-content-between
+                                    align-middle
+                                    border-0
+                                "
                             >
                                 <p class="font-weight-bold text-muted small text-uppercase">{{ trans.visitors }}</p>
                                 <p>
@@ -54,7 +70,7 @@
                                 </p>
                             </div>
                             <div class="card-body pt-0 pb-2">
-                                <p class="card-text display-4">{{ suffixedNumber(data.totalVisits) }}</p>
+                                <p class="card-text display-4">{{ suffixedNumber(data.visits) }}</p>
                             </div>
                         </div>
                     </div>
@@ -186,11 +202,11 @@ export default {
         },
 
         plotViewPoints() {
-            return JSON.parse(this.data.traffic.views);
+            return JSON.parse(this.data.graph.views);
         },
 
         plotVisitPoints() {
-            return JSON.parse(this.data.traffic.visits);
+            return JSON.parse(this.data.graph.visits);
         },
     },
 
