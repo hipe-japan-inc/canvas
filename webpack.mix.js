@@ -32,6 +32,4 @@ mix.setPublicPath('public')
     .setResourceRoot('../')
     .js('resources/js/app.js', 'public/js')
     .vue()
-    .sass('resources/sass/app.scss', 'public/css')
-    .version()
-    .sourceMaps();
+    .sass('resources/sass/app.scss', 'public/css');

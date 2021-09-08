@@ -190,7 +190,7 @@ export default {
                         [{ font: [] }],
                         [{ align: [] }],
                         ['link', 'image', 'video', 'formula'],
-                        ['clean'],
+                        ['clean'],gi
                     ],
                 },
                 theme: 'bubble',
