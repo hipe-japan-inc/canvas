@@ -17,7 +17,7 @@
         "filepond-plugin-file-validate-type": "^1.2.5",
         "filepond-plugin-image-exif-orientation": "^1.0.9",
         "filepond-plugin-image-preview": "^4.6.4",
-        "filepond-plugin-image-validate-size": "^1.2.4",
+        "filepond-plugin-image-validate-size": "^1.2.7",
         "jquery": "^3.5.1",
         "laravel-mix": "^6.0.6",
         "lodash": "^4.17.19",
