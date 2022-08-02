@@ -43,7 +43,7 @@
         "vue-template-compiler": "^2.6.11",
         "vue-textarea-autosize": "^1.1.1",
         "vue-toasted": "^1.1.28",
-        "vuex": "^3.6.0"
+        "vuex": "^3.6.2"
     },
     "devDependencies": {
         "babel-eslint": "^10.1.0",
